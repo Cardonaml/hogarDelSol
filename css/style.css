@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  font-family: 'Nunito', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #19324b;  
+}
+
+body {
+  background-image: linear-gradient(to top, #2bc0e4, #eaecc6);
+  background-repeat: no-repeat;
+}
+
+.nav-link.active{
+  color: #19324b !important;
+}
+
+.form-control{
+  background-color: #faf1c2 !important;
+}
+
+.carousel-item::before{
+  background: #000;
+  opacity: 0.7;
+}
+
+/*ANIMACIONES*/
+#nubeDerecha {
+  animation: desplazar-izq 30s linear 1s infinite alternate-reverse;
+}
+@keyframes desplazar-izq{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(-30%);
+  }
+}
+
+#nubeIzquierda {
+  animation: desplazar-der 30s linear 1s infinite alternate-reverse;
+}
+@keyframes desplazar-der{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(-30%);
+  }
+}
+
+#nubeSuperior{
+  animation: desplazar-sup 30s linear 1s infinite alternate-reverse;
+}
+@keyframes desplazar-sup{
+  from{
+    transform: translateX(-30%);
+  }
+  to{
+    transform: translateX(100%);
+  }
+}
+
+#aveIzquierda{
+ animation: vuelo-izq 10s ease-in-out 1s infinite alternate-reverse;
+}
+
+@keyframes vuelo-izq{
+  0%{
+    transform: translate(0) scale(1) rotateZ(0);
+  }
+  25%{
+    transform: translate(-100px) scale(1) rotateZ(-15deg);
+  }
+  50%{
+    transform: translate(-200px) scale(1) rotateZ(-25deg);
+  }
+  75%{
+    transform: translate(-300px) scale(1) rotateZ(15deg);
+  }
+  100%{
+    transform: translate(-400px) scale(1) rotateZ(-25deg);
+  }
+}
+
+#aveSuperior{
+  animation: vuelo-sup 15s ease-in-out 1s infinite alternate-reverse both;
+}
+
+@keyframes vuelo-sup{
+  0%{
+    transform: translate(0) scale(1) rotateZ(0);
+  }
+  20%{
+    transform: translate(-100px) scale(1) rotateZ(-15deg);
+  }
+  45%{
+    transform: translate(-200px) scale(1) rotateZ(-25deg);
+  }
+  65%{
+    transform: translate(-300px) scale(1) rotateZ(15deg);
+  }
+  100%{
+    transform: translate(-400px) scale(1) rotateZ(-25deg);
+  }
+}
+
+#aveDerecha{
+  animation: vuelo-der 20s ease-in-out 1s infinite alternate-reverse both;
+}
+@keyframes vuelo-der{
+  0%{
+    transform: translate(0) scale(1) rotateZ(0);
+  }
+  30%{
+    transform: translate(-100px) scale(1) rotateZ(-15deg);
+  }
+  55%{
+    transform: translate(-300px) scale(1) rotateZ(-25deg);
+  }
+  70%{
+    transform: translate(-400px) scale(1) rotateZ(15deg);
+  }
+  100%{
+    transform: translate(-500px) scale(1) rotateZ(-25deg);
+  }
+}
+
+/*FIN DE ANIMACIONES*/
